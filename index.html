@@ -973,67 +973,31 @@ min-height: 100%;
 }
 .consent-label {
   display: flex;
-  align-items: flex-start; /* 🔥 klucz */
-  gap: 10px;
-  cursor: pointer;
-}
-
-.consent-label {
-  display: flex;
   align-items: flex-start;
   gap: 10px;
+
+  text-transform: none;   /* 🔥 usuwa CAPSLOCK */
+  font-weight: 400;       /* 🔥 normalny tekst */
+  letter-spacing: normal; /* 🔥 usuwa spacing z labela */
   cursor: pointer;
 }
 
-/* 🔥 PRAWDZIWY checkbox – stylowany */
-.real-checkbox {
-  appearance: none;
-  -webkit-appearance: none;
-
-  width: 18px;
-  height: 18px;
-
-  border: 2px solid rgba(255,255,255,0.4);
-  border-radius: 5px;
-
+/* checkbox po lewej */
+.consent-label input {
+  width: 16px;
+  height: 16px;
   margin-top: 4px;
   flex-shrink: 0;
-
-  position: relative;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-/* hover */
-.real-checkbox:hover {
-  border-color: #00a984;
-}
-
-/* checked */
-.real-checkbox:checked {
-  background: #00a984;
-  border-color: #00a984;
-}
-
-/* tick */
-.real-checkbox:checked::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 1px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  accent-color: #00a984; /* 🔥 ładny kolor */
 }
 
 /* tekst */
-.consent-text {
-  font-size: 12.5px;
+.consent-label span {
+  font-size: 13px;
   color: #8899AA;
   line-height: 1.5;
 }
+🎯 Efekt:
     </style>
 </head>
 <body>
@@ -1353,8 +1317,8 @@ Dzięki tym działaniom ministerstwo wzmacnia system badań i innowacji w Mołda
   </div>
 <div class="field consent-field">
   <label class="consent-label">
-    <input type="checkbox" name="consent_all" required class="real-checkbox">
-    <span class="consent-text">
+    <input type="checkbox" name="consent_all" required>
+    <span>
       Wyrażam zgodę na przetwarzanie moich danych osobowych przez Uniwersytet Śląski w Katowicach w celu obsługi zgłoszenia do Regionalnej Grupy Interesariuszy (RSG) w ramach projektu SOCORE oraz na otrzymywanie drogą elektroniczną informacji związanych z projektem, w tym zaproszeń na wydarzenia, aktualności i newslettera, zgodnie z RODO.
     </span>
   </label>
