@@ -971,24 +971,29 @@ min-height: 100%;
 .footer-badge.socore {
   background: var(--teal);
 }
+.consent-field {
+  margin-top: 16px;
+}
+
 .consent-label {
   display: flex;
   align-items: flex-start;
   gap: 10px;
 
-  text-transform: none;   /* 🔥 usuwa CAPSLOCK */
-  font-weight: 400;       /* 🔥 normalny tekst */
-  letter-spacing: normal; /* 🔥 usuwa spacing z labela */
+  text-transform: none;   /* usuwa CAPS */
+  font-weight: 400;
+  letter-spacing: normal;
+
   cursor: pointer;
 }
 
-/* checkbox po lewej */
+/* checkbox */
 .consent-label input {
   width: 16px;
   height: 16px;
   margin-top: 4px;
   flex-shrink: 0;
-  accent-color: #00a984; /* 🔥 ładny kolor */
+  accent-color: #00a984;
 }
 
 /* tekst */
@@ -997,7 +1002,16 @@ min-height: 100%;
   color: #8899AA;
   line-height: 1.5;
 }
-🎯 Efekt:
+
+/* link */
+.consent-link {
+  color: #00a984;
+  text-decoration: underline;
+}
+
+.consent-link:hover {
+  color: #00c9a7;
+}
     </style>
 </head>
 <body>
