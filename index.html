@@ -1032,6 +1032,38 @@ min-height: 100%;
   flex-shrink: 0;
   accent-color: #00a984;
 } 
+    /* 🔥 HARD RESET CHECKBOXÓW */
+input[type="checkbox"] {
+  all: revert !important;      /* resetuje wszystkie dziwne style */
+  width: 16px !important;
+  height: 16px !important;
+  margin: 0 !important;
+
+  display: inline-block !important;
+  vertical-align: top;
+
+  accent-color: #00a984;
+  cursor: pointer;
+}
+
+/* układ */
+.consent-label {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+
+  text-transform: none !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+/* tekst */
+.consent-label span {
+  display: block;
+  font-size: 13px;
+  color: #8899AA;
+  line-height: 1.5;
+}
     </style>
 </head>
 <body>
