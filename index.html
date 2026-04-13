@@ -971,32 +971,28 @@ min-height: 100%;
 .footer-badge.socore {
   background: var(--teal);
 }
-    /* 🔥 CUSTOM CHECKBOX */
-.consent-field {
-  margin-top: 20px;
-}
-
 .consent-label {
   display: flex;
-  align-items: flex-start;
-  gap: 12px;
+  align-items: flex-start; /* 🔥 klucz */
+  gap: 10px;
   cursor: pointer;
-  text-transform: none;
 }
 
+/* ukrywamy natywny checkbox */
 .consent-label input {
   display: none;
 }
 
+/* box */
 .checkmark {
-  min-width: 20px;
-  height: 20px;
+  flex-shrink: 0;          /* 🔥 NIE kurczy się */
+  width: 18px;
+  height: 18px;
   border: 2px solid rgba(255,255,255,0.4);
-  border-radius: 6px;
-  background: transparent;
-  transition: all 0.2s ease;
+  border-radius: 5px;
+  margin-top: 4px;         /* 🔥 idealne wyrównanie do tekstu */
   position: relative;
-  margin-top: 3px;
+  transition: all 0.2s ease;
 }
 
 /* hover */
@@ -1016,8 +1012,8 @@ min-height: 100%;
   position: absolute;
   left: 5px;
   top: 1px;
-  width: 6px;
-  height: 12px;
+  width: 5px;
+  height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
